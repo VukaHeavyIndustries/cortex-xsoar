@@ -3,7 +3,7 @@ from typing import Dict, List, Optional, Any, Tuple
 from dateparser import parse
 from requests import Response
 from urllib3 import disable_warnings
-from CommonServerPython import * # noqa: F401 # pylint: disable=unused-wildcard-import
+from CommonServerPython import *  # noqa: F401 # pylint:# disable=unused-wildcard-import
 
 
 # Disable insecure warnings
