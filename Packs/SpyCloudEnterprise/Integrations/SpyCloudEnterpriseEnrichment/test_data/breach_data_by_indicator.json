@@ -4,7 +4,7 @@
   "results": [
     {
       "source_id": 40875,
-      "email": "pmission_federal@sparefactor.com",
+      "email": "Dummy Email",
       "full_name": "Audrey Marsh",
       "spycloud_publish_date": "2023-01-06T00:00:00Z",
       "email_domain": "sparefactor.com",
@@ -15,7 +15,7 @@
     },
     {
       "source_id": 40875,
-      "email": "json_three@sparefactor.com",
+      "email": "Dummy Email",
       "full_name": "Evan Green",
       "spycloud_publish_date": "2023-01-06T00:00:00Z",
       "email_domain": "sparefactor.com",
@@ -26,21 +26,21 @@
     },
     {
       "source_id": 40875,
-      "email": "pdecade_science@sparefactor.com",
-      "password": "J_6ImfaI%2xU!P5c",
+      "email": "Dummy Email",
+      "password": "password",
       "password_type": "plaintext",
       "full_name": "Mary Clark",
       "spycloud_publish_date": "2023-01-06T00:00:00Z",
       "email_domain": "sparefactor.com",
       "email_username": "pdecade_science",
       "domain": "sparefactor.com",
-      "password_plaintext": "J_6ImfaI%2xU!P5c",
+      "password_plaintext": "password",
       "severity": 20,
       "document_id": "02fbe9d4-63bb-4fa7-abbd-76669708532e"
     },
     {
       "source_id": 40875,
-      "email": "ck_quickly@sparefactor.com",
+      "email": "Dummy Email",
       "password": "uictor.comcck_qquic223w",
       "password_type": "plaintext",
       "full_name": "Alfred Smith",
@@ -60,7 +60,7 @@
       "target_url": "https://us-weblogin.sparefactor.com",
       "user_browser": "Microsoft Edge",
       "ip_addresses": [
-        "97.132.162.36"
+        "4.4.4.4"
       ],
       "infected_machine_id": "7f467129-a046-41ac-80aa-c891550de68c",
       "infected_path": "C:\\Users\\default\\AppData\\Roaming\\7f46\\Setup.exe",
@@ -79,13 +79,13 @@
     {
       "email": "ggeneral_now@sparefactor.com",
       "username": "est807ykind",
-      "password": "*Up09K3mueU(RMdZ",
-      "password_plaintext": "*Up09K3mueU(RMdZ",
+      "password": "password",
+      "password_plaintext": "password",
       "password_type": "plaintext",
-      "target_url": "https://partnercentral.awspartner.com",
+      "target_url": "http//abc.com",
       "user_browser": "Firefox",
       "ip_addresses": [
-        "23.169.55.96"
+        "4.4.4.4"
       ],
       "infected_machine_id": "b1ed1930-11b6-4dcb-983a-30e1f1a6f728",
       "infected_path": "C:\\Users\\default\\AppData\\Roaming\\b1ed\\Setup.exe",

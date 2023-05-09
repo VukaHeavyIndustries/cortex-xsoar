@@ -1,8 +1,5 @@
-## BaseIntegration Help
+# SpyCloud
 
-Markdown file for integration configuration  help snippet. In this file add:
-
-- Brief information about how to retrieve the API key of your product
-- Other useful information on how to configure your integration in XSOAR
-
-Since this is a Markdown file, we encourage you to use MD formatting for sections, sub-sections, lists, etc.
+Use SpyCloud Integration to interactively lookup Breaches list, Breaches 
+list by domain, Breaches list by Username, Breaches list by Email, Breaches 
+list by IP either as playbook tasks or in the War Room.
