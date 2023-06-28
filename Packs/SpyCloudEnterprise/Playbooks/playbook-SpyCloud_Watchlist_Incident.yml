@@ -245,13 +245,6 @@ tasks:
     nexttasks:
       '#none#':
       - "14"
-    scriptarguments:
-      since_modification_date:
-        simple: "2022-01-01"
-      until_modification_date:
-        simple: "2023-01-01"
-      watchlist_type:
-        simple: email
     separatecontext: false
     continueonerrortype: ""
     view: |-
