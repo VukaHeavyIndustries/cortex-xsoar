@@ -86,8 +86,11 @@ Lists the breaches identified. By default, this lists all breaches known in SpyC
 | SpyCloud.BreachList.assets.username | Number | Username. | 
 
 #### Command example
+
 ```!spycloud-list-breaches limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -159,6 +162,7 @@ Lists the breaches identified. By default, this lists all breaches known in SpyC
 #### Human Readable Output
 
 >### Breach List
+
 >|Title|SpyCloud Publish Date|Description|Confidence|ID|Acquisition Date|UUID|Type|
 >|---|---|---|---|---|---|---|---|
 >| Sensitive Source | 2023-05-05T00:00:00Z | This source has been marked as sensitive due to one of the following reasons: Revealing the source may compromise an on-going investigation. The affected site is of a controversial nature but does not validate email addresses and could therefore be used to tarnish an employee's reputation. | 3 | 43120 | 2023-04-14T00:00:00Z | 0f9cfacd-f583-4b16-9eb6-e2b54bc51e43 | PUBLIC |
@@ -221,8 +225,11 @@ Retrieve Breach Catalog Information by ID.
 | SpyCloud.BreachData.assets.username | Number | Username. | 
 
 #### Command example
+
 ```!spycloud-get-breach-data id=39897 limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -261,6 +268,7 @@ Retrieve Breach Catalog Information by ID.
 #### Human Readable Output
 
 >### Breach data for id 39897
+
 >|Title|SpyCloud Publish Date|Description|Confidence|ID|Acquisition Date|UUID|Type|
 >|---|---|---|---|---|---|---|---|
 >| Mansfield Independent School District | 2023-04-18T00:00:00Z | On an unknown date, data allegedly belonging to Mansfield Independent School District, a U.S-based educational district, was leaked online. The data contains names, email addresses, phone numbers, addresses and additional personal information. This leak is being publicly shared on online forums. | 3 | 39897 | 2022-10-04T00:00:00Z | c504f30a-6fe7-48df-becf-4e14f16e6c0d | PUBLIC |
@@ -322,8 +330,11 @@ Get Breach Data by Domain Search
 | SpyCloud.Domain.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-domain-data domain=dummy.com limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -373,6 +384,7 @@ Get Breach Data by Domain Search
 #### Human Readable Output
 
 >### Breach List for domain dummy.com
+
 >|Source ID| Email       |Full Name|Email Domain|Email Username|SpyCloud Publish Date|Domain|Document ID|Severity|
 >|---|-------------|---|---|---|---|---|---|---|
 >| 41180 | Dummy Email | Shyam Moolagiri | dummy.com | smoolagiri | <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>2023-03-28T00:00:00Z | dummy.com | 0046c7e3-fcf4-4d24-9c45-255116054640 | 5 |
@@ -434,7 +446,9 @@ Get Breach Data by Username Search.
 | SpyCloud.Username.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-username-data username=abc limit=2```
+
 #### Human Readable Output
 
 >No data to present.
@@ -495,8 +509,11 @@ Get Breach Data by IP Address Search
 | SpyCloud.IPAddress.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-ip-address-data ip=4.4.4.4 limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -549,6 +566,7 @@ Get Breach Data by IP Address Search
 #### Human Readable Output
 
 >### Breach List for IP address 
+
 >|Source ID| Email           |Full Name|User Name|Email Domain|Email Username|Password|Password Type|IP Addresses|SpyCloud Publish Date|Domain|Document ID|Severity|Sighting|
 >|---|-----------------|---|---|---|---|---|---|---|---|---|---|---|---|
 >| 38326 | Dummy Email |  | bossssomesh | gmail.com | bossmsrao |  |  | 4.4.4.4 | 2021-12-02T00:00:00Z | gmail.com | 44a59857-49dd-445b-8d19-c9ddc12ecde5 | 5 |  |
@@ -610,8 +628,11 @@ Get Breach Data by Email Search.
 | SpyCloud.EmailAddress.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-email-data email=Dummmy Email limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -638,6 +659,7 @@ Get Breach Data by Email Search.
 #### Human Readable Output
 
 >### Breach List for Email address Dummy Email
+
 >|Source ID| Email       |Full Name|Email Domain|Email Username|SpyCloud Publish Date|Domain|Document ID|Severity|
 >|---|-------------|---|---|---|---|---|---|---|
 >| 41180 | Dummy Email | Shyam Moolagiri | dummy.com | smoolagiri | 2023-03-28T00:00:00Z | dummy.com   | 0046c7e3-fcf4-4d24-9c45-255116054640 | 5 |
@@ -698,8 +720,11 @@ Get Breach Data by Password Search.
 | SpyCloud.Password.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-password-data password=welcome@123 limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -735,6 +760,7 @@ Get Breach Data by Password Search.
 #### Human Readable Output
 
 >### Breach List for Password welcome@123
+
 >|Source ID|Email|Email Domain|Email Username|Target Domain|Target Subdomain|Password|Password Plaintext|Password Type|Target URL|IP Addresses|Infected Machine ID|User SYS Registered Owner|SpyCloud Publish Date|Domain|Document ID|Severity|Sighting|
 >|---|--|---|---|---|---|---|---|---|---|--|---|---|---|---|---|---|---|
 >| 37732 | Dummy Email | dummy.com | kummadisetti | slack.com | dummy.slack.com | welcome@123 | welcome@123 | plaintext | dummy.slack.com | 4.4.4.4 | 51aa3c3d-090e-417a-8e8c-3a94726e5fed | saket | 2021-06-24T00:00:00Z | dummy.com | bc436d97-395c-4b03-819b-9b8fad7711bd | 25 | 1 |
@@ -796,8 +822,11 @@ Get Breach Data by Password Search.
 | SpyCloud.Watchlist.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-watchlist-data limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -847,6 +876,7 @@ Get Breach Data by Password Search.
 #### Human Readable Output
 
 >### Watchlist Data
+
 >|Source ID|Email|Full Name|Email Domain|Email Username|SpyCloud Publish Date|Domain|Document ID|Severity|
 >|---|--|---|---|---|---|---|---|---|
 >| 41180 | Dummy Email | Shyam Moolagiri | dummy.com | smoolagiri | 2023-03-28T00:00:00Z | dummy.com | 0046c7e3-fcf4-4d24-9c45-255116054640 | 5 |
@@ -901,8 +931,11 @@ Get compass device data by infected_machine_id.
 | SpyCloud.CompassDeviceData.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-compass-device-data infected_machine_id=72aaaec1-afa1-4d9e-838f-abfcbbf3ff82 limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -933,6 +966,7 @@ Get compass device data by infected_machine_id.
 #### Human Readable Output
 
 >### Compass Devices - Data
+
 >|Source ID|User Name|Target Domain|Target Subdomain|Password|Password Plaintext|Password Type|Target URL|User Browser|IP Addresses|Infected Machine ID|User OS|SpyCloud Publish Date|Document ID|Severity|
 >|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 >| 41985 | 345 | greythr.com | dummy.greythr.com | Tron99***018 | Tron99***018 | plaintext | dummy.greythr.com | Chrome (v109.0.5414.120-64, Profile: Profile 1) | 4.4.4.4 | 72aaaec1-afa1-4d9e-838f-abfcbbf3ff82 | Windows 10 Pro | 2023-03-02T00:00:00Z | c8a11837-808a-4b1e-b9d8-cfba0739c7f5 | 25 |
@@ -992,8 +1026,11 @@ Compass data list.
 | SpyCloud.CompassDataList.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-compass-data-list limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -1053,6 +1090,7 @@ Compass data list.
 #### Human Readable Output
 
 >### Compass Data List
+
 >|Source ID| Email         |User Name|Email Domain|Email Username|Target Domain|Target Subdomain|Password|Password Plaintext|Password Type|Target URL|User Browser|IP Addresses|Infected Machine ID|Infected Path|Infected Time|User Hostname|User OS|User SYS Registered Owner|SpyCloud Publish Date|Domain|Document ID|Severity|
 >|---|---------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 >| 41985 |               | 345 |  |  | greythr.com | dummy.greythr.com | Tron99***018 | Tron99***018 | plaintext | dummy.greythr.com | Chrome (v109.0.5414.120-64, Profile: Profile 1) | 4.4.4.4 | 72aaaec1-afa1-4d9e-838f-abfcbbf3ff82 |  |  |  | Windows 10 Pro |  | 2023-03-02T00:00:00Z |  | c8a11837-808a-4b1e-b9d8-cfba0739c7f5 | 25 |
@@ -1111,8 +1149,11 @@ Compass device list data.
 | SpyCloud.CompassDeviceList.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-compass-device-list limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -1147,6 +1188,7 @@ Compass device list data.
 #### Human Readable Output
 
 >### Compass Device List
+
 >|Source ID|IP Addresses|Infected Machine ID|Infected Time|User Hostname|User OS|SpyCloud Publish Date|
 >|---|---|---|---|---|---|---|
 >| 41985 | 4.4.4.4 | 72aaaec1-afa1-4d9e-838f-abfcbbf3ff82 |  |  | Windows 10 Pro | 2023-03-02T00:00:00Z |
@@ -1204,8 +1246,11 @@ Get compass application data.
 | SpyCloud.CompassApplicationData.domain | String | Domain name. | 
 
 #### Command example
+
 ```!spycloud-compass-application-data target_application=dummy.greythr.com limit=2```
+
 #### Context Example
+
 ```json
 {
     "SpyCloud": {
@@ -1262,6 +1307,7 @@ Get compass application data.
 #### Human Readable Output
 
 >### Compass Applications - Data
+
 >|Source ID|User Name|Target Domain|Target Subdomain|Password|Password Plaintext|Password Type|Target URL|User Browser|IP Addresses|Infected Machine ID|Infected Path|Infected Time|User Hostname|User OS|User SYS Registered Owner|SpyCloud Publish Date|Document ID|Severity|
 >|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 >| 41985 | 345 | greythr.com | dummy.greythr.com | Tron99***018 | Tron99***018 | plaintext | dummy.greythr.com | Chrome (v109.0.5414.120-64, Profile: Profile 1) | 4.4.4.4 | 72aaaec1-afa1-4d9e-838f-abfcbbf3ff82 |  |  |  | Windows 10 Pro |  | 2023-03-02T00:00:00Z | c8a11837-808a-4b1e-b9d8-cfba0739c7f5 | 25 |

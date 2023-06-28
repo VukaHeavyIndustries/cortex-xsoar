@@ -1,7 +1,7 @@
 import pytest
 import json
 import io
-from SpyCloud import (
+from SpyCloudEnterpriseEnrichment import (
     Client,
     command_helper_function,
     get_command_title_string,

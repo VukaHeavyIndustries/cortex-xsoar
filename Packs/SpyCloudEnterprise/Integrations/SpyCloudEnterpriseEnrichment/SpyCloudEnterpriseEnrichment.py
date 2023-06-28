@@ -31,6 +31,7 @@ TOO_MANY_REQUESTS = "TooManyRequestsException"
 INVALID_IP = "Invalid IP"
 INVALID_API_KEY = "Invalid API key"
 X_AMAZON_ERROR_TYPE = "x-amzn-ErrorType"
+WRONG_API_URL = "Verify that the API URL parameter is correct and that you have access to the server from your host"
 SPYCLOUD_ERROR = "SpyCloud-Error"
 INVALID_IP_MSG = "Kindly contact SpyCloud support to whitelist your IP Address."
 MONTHLY_QUOTA_EXCEED_MSG = (
@@ -118,6 +119,8 @@ class Client(BaseClient):
                 )
             elif INVALID_API_KEY in response_headers.get(SPYCLOUD_ERROR, ""):
                 raise DemistoException(INVALID_CREDENTIALS_ERROR_MSG, res=response)
+            else:
+                raise DemistoException(WRONG_API_URL, res=response)
         else:
             raise DemistoException(err_msg)
 
@@ -153,7 +156,7 @@ def pagination(page: Optional[int], page_size: Optional[int], limit: Optional[in
 
 
 def get_paginated_results(results: List, offset: int, limit: int) -> List:
-    return results[offset:offset + limit]
+    return results[offset : offset + limit]
 
 
 def test_module(client: Client) -> str:
@@ -182,22 +185,22 @@ def create_spycloud_args(args: Dict) -> Dict:
     """
 
     spycloud_args: Dict = {}
-    since: Any = parse(args.get("since", ""), settings={"TIMEZONE": "UTC"})
-    until: Any = parse(args.get("until", ""), settings={"TIMEZONE": "UTC"})
-    since_modification_date: Any = parse(
-        args.get("since_modification_date", ""), settings={"TIMEZONE": "UTC"}
+    since: Any = arg_to_datetime(args.get("since", None), "Since")
+    until: Any = arg_to_datetime(args.get("until", None), "Until")
+    since_modification_date: Any = arg_to_datetime(
+        args.get("since_modification_date", None), "Since Modification Date"
     )
-    until_modification_date: Any = parse(
-        args.get("until_modification_date", ""), settings={"TIMEZONE": "UTC"}
+    until_modification_date: Any = arg_to_datetime(
+        args.get("until_modification_date", None), "Until Modification Date"
     )
     if until:
         until = until.strftime("%Y-%m-%d")
     if since:
         since = since.strftime("%Y-%m-%d")
     if since_modification_date:
-        since_modification_date = since_modification_date.trftime("%Y-%m-%d")
+        since_modification_date = since_modification_date.strftime("%Y-%m-%d")
     if until_modification_date:
-        until_modification_date = until_modification_date.trftime("%Y-%m-%d")
+        until_modification_date = until_modification_date.strftime("%Y-%m-%d")
     severity_list = argToList(args.get("severity", []))
     for severity in severity_list:
         if severity not in ["2", "5", "25", "20"]:
@@ -349,6 +352,7 @@ def command_helper_function(client: Client, args: Dict[str, Any], command: str):
         if command not in breach_command
         else breaches_lookup_to_markdown(results, title)
     )
+
     return CommandResults(
         readable_output=readable_output,
         outputs_prefix=f"{INTEGRATION_CONTEXT_NAME}.{context}",
